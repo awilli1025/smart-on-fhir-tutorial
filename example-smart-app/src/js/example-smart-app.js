@@ -168,7 +168,7 @@
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
 
-    $('#EKG').html(p.EKG);//EKG
+    $('#EKg').html(p.EKG);//EKG
   };
 
 })(window);
