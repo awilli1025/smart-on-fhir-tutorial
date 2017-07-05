@@ -17,7 +17,8 @@
                       code: {
                         $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
                               'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4',
+                              'http://loinc.org|18810-2']//last code for EKG
                       }
                     }
                   });
@@ -48,12 +49,17 @@
           var ldl = byCodes('2089-1');
 
           var p = defaultPatient();
+
+          var EKG = byCodes('18810-2'); //EKG value
+
           p.birthdate = dobStr;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
           p.age = parseInt(calculateAge(dob));
           p.height = getQuantityValueAndUnit(height[0]);
+
+          p.EKG = EKG;//EKG VALUE
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -90,6 +96,8 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+
+      EKG: {value: ''},//EKG
     };
   }
 
@@ -155,6 +163,8 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+
+    $('#EKG').html(p.EKG);//EKG
   };
 
 })(window);
