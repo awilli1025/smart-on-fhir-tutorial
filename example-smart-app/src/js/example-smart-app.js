@@ -63,6 +63,8 @@
           if (typeof EKG != 'undefined'){
             p.EKG = 'none';
           }
+          else
+            p.EKG = 5;
 
 
           if (typeof systolicbp != 'undefined')  {
