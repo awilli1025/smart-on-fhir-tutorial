@@ -60,6 +60,10 @@
           p.height = getQuantityValueAndUnit(height[0]);
 
           p.EKG = EKG;//EKG VALUE
+          if (typeof EKG != 'undefined'){
+            p.EKG = 'none';
+          }
+
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
