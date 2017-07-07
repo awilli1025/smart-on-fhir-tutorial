@@ -102,7 +102,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-
+      
       EKG: {value: ''},//EKG
     };
   }
