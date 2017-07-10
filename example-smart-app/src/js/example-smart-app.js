@@ -8,7 +8,8 @@
     }
 
     function onReady(smart)  {
-      if (smart.hasOwnProperty('patient')) {
+      //if (smart.hasOwnProperty('patient')) {
+      if (smart.hasOwnProperty('Patient')) { //edit
         var patient = smart.patient;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
@@ -50,7 +51,7 @@
 
           var p = defaultPatient();
 
-          var EKG = byCodes('11524-6'); //EKG value
+          var EKG = byCodes('18810-2'); //EKG value
 
           p.birthdate = dobStr;
           p.gender = gender;
