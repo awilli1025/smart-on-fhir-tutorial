@@ -66,12 +66,12 @@
 
           p.EKG = EKG;//EKG VALUE
           if (typeof EKG != 'undefined'){
-            p.EKG = 'none';
+            p.EKG = EKG;
           }
 
 
           if (typeof systolicbpDate != 'undefined'){ //systolic date
-            p.systolicbpDate = 'none';
+            p.systolicbpDate = systolicbpDate;
           }
 
           if (typeof systolicbp != 'undefined')  {
