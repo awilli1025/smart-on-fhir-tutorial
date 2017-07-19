@@ -51,7 +51,7 @@
 
           var EKG = byCodes('18810-2'); //EKG value
 
-          var systolicbpDate = byCodes('55284-4').valueDateTime; //systolic date
+          var systolicbpDate = byCodes('55284-4').effectiveDateTime; //systolic date
 
           var p = defaultPatient();
 
@@ -66,7 +66,7 @@
 
           p.EKG = EKG;//EKG VALUE
           if (typeof EKG != 'undefined'){
-            p.EKG = 'EKG exists';
+            p.EKG = EKG;
           }
           else
             p.EKG = "EKG doesn't exist";
