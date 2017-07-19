@@ -68,15 +68,11 @@
           if (typeof EKG != 'undefined'){
             p.EKG = 'none';
           }
-          else
-            p.EKG = 5;
 
 
           if (typeof systolicbpDate != 'undefined'){ //systolic date
             p.systolicbpDate = 'none';
           }
-          else
-            p.systolicbpDate = 6;
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
