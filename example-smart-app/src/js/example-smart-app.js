@@ -184,6 +184,7 @@
     $('#hdl').html(p.hdl);
 
     $('#EKG').html(p.EKG);//EKG
+    $('#systolicbpDate').html(p.systolicbpDate);//systolic bp date
   };
 
 })(window);
