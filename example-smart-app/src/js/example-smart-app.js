@@ -75,8 +75,6 @@
           if (typeof systolicbpDate != 'undefined'){ //systolic date
             p.systolicbpDate = 'none';
           }
-          else
-            p.systolicbpDate = 5;
 
 
           if (typeof systolicbp != 'undefined')  {
