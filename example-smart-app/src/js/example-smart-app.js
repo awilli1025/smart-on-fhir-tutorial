@@ -66,13 +66,17 @@
 
           p.EKG = EKG;//EKG VALUE
           if (typeof EKG != 'undefined'){
-            p.EKG = EKG;
+            p.EKG = 'EKG exists';
           }
+          else
+            p.EKG = "EKG doesn't exist";
 
 
           if (typeof systolicbpDate != 'undefined'){ //systolic date
-            p.systolicbpDate = systolicbpDate;
+            p.systolicbpDate = 'systolicbpDate exists';
           }
+          else
+            p.systolicbpDate = 'doesn"t exist';
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
