@@ -49,9 +49,13 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
+          var EKG = byCodes('18810-2'); //EKG value
+
+          var systolicbpDate = byCodes('55284-4').valueDateTime; //systolic date
+
           var p = defaultPatient();
 
-          var EKG = byCodes('18810-2'); //EKG value
+
 
           p.birthdate = dobStr;
           p.gender = gender;
@@ -66,6 +70,13 @@
           }
           else
             p.EKG = 5;
+
+
+          if (typeof systolicbpDate != 'undefined'){ //systolic date
+            p.systolicbpDate = 'none';
+          }
+          else
+            p.systolicbpDate = 5;
 
 
           if (typeof systolicbp != 'undefined')  {
@@ -91,7 +102,7 @@
 
   };
 
-  function defaultPatient(){
+  function defaultPatient(){ //holds the "instance variables" of p
     return {
       fname: {value: ''},
       lname: {value: ''},
@@ -105,6 +116,7 @@
       hdl: {value: ''},
 
       EKG: {value: ''},//EKG
+      systolicbpDate: {value: ''},//systolic bp date
     };
   }
 
