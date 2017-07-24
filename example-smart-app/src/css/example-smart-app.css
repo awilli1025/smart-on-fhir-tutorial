@@ -11,12 +11,8 @@ body {
   display: none;
 }
 
-#feedback a{ display:block; position:fixed; top:200px; right:-1px; background:green; padding:7px 5px;
- border:1px solid #030;
- border-left-color:#060;
- border-top-color:#090;
+#feedback a{ display:block; position:fixed; top:200px; right:-1px; background:blue; padding:1px 1px;
  }
-#feedback a:hover{background:#030;border:1px solid #030;}
 
 .spinner {
   margin: 100px auto 0;
