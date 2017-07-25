@@ -43,7 +43,7 @@
     </div>
 
       <center><div>
-        <a href="http://imgur.com/6BhK6ge"><img src="http://i.imgur.com/6BhK6ge.png" alt = "CareWeb Plus" style = "width:468px;height:132px;" align = "middle"></a>
+        <a href="http://imgur.com/6BhK6ge"><img src="http://i.imgur.com/6BhK6ge.png" alt = "CareWeb Plus" style = "width:468px;height:132px;"></a>
         </div>
       </center>
 
@@ -102,14 +102,80 @@
         </div>
       
         <div id="right" style = "float:left; width:50%">
-            <section style="height:300px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto; ">
-              Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data.
+            <section style="height:328px;width:300px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto; ">
+              Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data. Scroll box for the data.
             </section>
         </div>
       </div>
-    <div id="feedback"><a href="http://imgur.com/BNOa2Pn"><img src="http://i.imgur.com/BNOa2Pn.png" title="source: imgur.com" height = "50" width = "65"/></a></div>
+   <!-- First Pic
+   <div id="feedback"><a href="http://imgur.com/BNOa2Pn"><img src="http://i.imgur.com/BNOa2Pn.png" title="source: imgur.com" height = "50" width = "65"/></a></div>
+   -->
+   
+   <!-- Experimenting with Feedback Button -->
+   	<div>
+   		<button id = "feedbackbutton" style = "height:100px;width:103px;">
+   		</button>
+   		<div id = "FeedbackModal" class="modal">
+   			<div class = "modal-content">
+   				<div class = "modal-header">
+   					<span class = "close">&times;</span>
+   					<h2>Feedback</h2>
+				</div>
+  				
+  				<div class = "modal-body">
+					<form action="/action_page.php">
+						<label for="firname">First Name</label>
+						<input type="text" id="firname" name="firstname" placeholder="Your name..">
 
-    <script src='./lib/es6-shim-0.35.1.min.js'></script>
+						<label for="lasname">Last Name</label>
+						<input type="text" id="lasname" name="lastname" placeholder="Your last name..">
+
+						<label for="country">Country</label>
+						<select id="country" name="country">
+						  <option value="australia">Australia</option>
+						  <option value="canada">Canada</option>
+						  <option value="usa">USA</option>
+						</select>
+
+						<label for="subject">Subject</label>
+						<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+   		</div>
+   	</div>
+    
+    <script>
+		// Get the modal
+		var modal = document.getElementById('FeedbackModal');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("feedbackbutton");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script src='./lib/es6-shim-0.35.1.min.js'></script>
     <script src='./src/js/example-smart-app.js'></script>
     <script src='./lib/fhir-client.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
