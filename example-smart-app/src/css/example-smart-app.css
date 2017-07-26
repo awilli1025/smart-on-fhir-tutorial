@@ -15,9 +15,8 @@ body {
  }
 
 #feedbackbutton{
-	background-image: url('http://i.imgur.com/BNOa2Pn.png');
-	background-size: 100px 100px;
 	display:block; position:fixed; top:100px; right:-1px; padding:4px 4px; padding-bottom: 0px;
+	background: #ADEE86;
 }
 
 .spinner {
@@ -180,5 +179,6 @@ input[type=submit]:hover {
 }
 
 .chiefComplaintTab{
-	padding-right: 205px
+	padding-right: 230px;
+	margin-right: 50px;
 }
