@@ -176,10 +176,13 @@ input[type=submit]:hover {
 .dataTable{ /*for the table of tests*/
 	margin-top: 10px;
 	margin-right: 50px;
+	margin-left: 10px;
 }
 
 .chiefComplaintTab{
 	margin-right: 50px;
+	margin-left: 10px;
+	margin-top: 3px;
 	padding-bottom: 3px;
 	padding-top: 3px;
 	padding-left: 8px;
