@@ -11,12 +11,14 @@ body {
   display: none;
 }
 
-#feedback a{ display:block; position:fixed; top:100px; right:-1px; background:grey; padding:4px 4px; padding-bottom: 0px;
- }
-
 #feedbackbutton{
 	display:block; position:fixed; top:100px; right:-1px; padding:4px 4px; padding-bottom: 0px;
-	background: #ADEE86;
+	background: rgba(0,0,0,0.4);
+	color:rgba(58,10,4,0.50);
+}
+
+#feedbackbutton a:hover{
+	background: #383;
 }
 
 .spinner {
