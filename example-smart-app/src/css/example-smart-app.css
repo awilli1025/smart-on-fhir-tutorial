@@ -180,4 +180,7 @@ input[type=submit]:hover {
 
 .chiefComplaintTab{
 	margin-right: 50px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	padding-left: 8px;
 }
