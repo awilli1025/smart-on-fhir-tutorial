@@ -24,7 +24,7 @@
           <td id='fname'></td>
         </tr>
         <tr>
-          <th>Last Name1:</th>
+          <th>Last Name0:</th>
           <td id='lname'></td>
         </tr>
         <tr>
@@ -184,9 +184,14 @@
 		  var a = document.getElementById("mylink");
 		  
 		  a.onclick = function(p){
-			  //printSystolic();
+			  
 			  $('#diastolicbp').html("Hello");
-			  $('#systolicbp').html(p.systolicbp);
+			  
+			  extractData().then(
+			  	function(p){
+					$('#systolicbp').html(p.systolicbp);
+				}
+			  );		  
 		  }
 	  }
 	  </script>
