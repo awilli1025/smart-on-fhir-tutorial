@@ -168,7 +168,7 @@
     }
   }
 function printSystolic(){
-	this.drawVisualization = function(p){
+	window.drawVisualization = function(p){
 		$('#systolicbp').html(p.systolicbp);
 	};
 }
