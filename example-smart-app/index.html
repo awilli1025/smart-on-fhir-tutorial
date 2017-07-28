@@ -64,7 +64,7 @@
             </tr>
 
             <tr>
-              <td>Systolic BP</td>
+				<td><a id = "mylink" href="#">Systolic BP</a></td>
               <td id='systolicbp'></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
@@ -178,6 +178,17 @@
 			}
 		}
 	</script>
+	
+	<script type="text/javascript">
+	  window.onload = function(){
+		  var a = document.getElementById("mylink");
+		  
+		  a.onclick = function{
+			  printSystolic();
+			  return false;
+		  }
+	  }
+	  </script>
 
 	<script src='./lib/es6-shim-0.35.1.min.js'></script>
     <script src='./src/js/example-smart-app.js'></script>

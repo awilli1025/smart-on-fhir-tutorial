@@ -167,7 +167,11 @@
       return undefined;
     }
   }
-
+function printSystolic(){
+	window.drawVisualization = function(p){
+		$('#systolicbp').html(p.systolicbp);
+	};
+}
   window.drawVisualization = function(p) {
     $('#holder').show();
     $('#loading').hide();
@@ -177,7 +181,7 @@
     $('#birthdate').html(p.birthdate);
     $('#age').html(p.age);
     $('#height').html(p.height);
-    $('#systolicbp').html(p.systolicbp);
+    //$('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
