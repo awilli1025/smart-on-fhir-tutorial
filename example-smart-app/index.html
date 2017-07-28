@@ -24,7 +24,7 @@
           <td id='fname'></td>
         </tr>
         <tr>
-          <th>Last Name2:</th>
+          <th>Last Name1:</th>
           <td id='lname'></td>
         </tr>
         <tr>
@@ -64,7 +64,7 @@
             </tr>
 
             <tr>
-				<td><a href="#" onclick=printSystolic()>Systolic BP</a></td>
+				<td><a id="mylink">Systolic BP</a></td>
               <td id='systolicbp'></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
@@ -183,7 +183,7 @@
 	  window.onload = function(){
 		  var a = document.getElementById("mylink");
 		  
-		  a.onclick = function{
+		  a.onclick = function(p){
 			  //printSystolic();
 			  $('#diastolicbp').html("Hello");
 			  $('#systolicbp').html(p.systolicbp);
