@@ -180,16 +180,15 @@
 	</script>
 	
 	<script>
-	  window.onload = function(){
-		  var a = document.getElementById("mylink");
+	  window.onload = function(){ //when the window finishes loading
+		  var a = document.getElementById("mylink");//link variable a to my hyperlink
 		  
-		  a.onclick = function(p){
-			  
-			  $('#diastolicbp').html("Hello");
-			  
+		  a.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
+
 			  extractData().then(
 			  	function(p){
 					$('#systolicbp').html(p.systolicbp);
+          $('#diastolicbp').html(p.diastolicbp);
 				}
 			  );		  
 		  }
