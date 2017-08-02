@@ -68,7 +68,7 @@
             <tr>
               <!--I turned Systolic BP test into a hyperlink that when pressed, incites script @ bottom to re-extract data, replacing the systolicbp id with systolic bp value-->
 				      <td><a id="mylink" href="#">Systolic BP</a></td>
-              <td id='systolicb'></td>
+              <td id='systolicbpDate'></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
             </tr>
@@ -195,7 +195,7 @@
 
 			  extractData().then(//extract data again
 			  	function(p){
-					$('#systolicbp').html(p.systolicbp); //switch id "systollic bp" for systoloc bp value
+					$('#systolicbp').html(p.systolicbp); //switch id "systolic bp" for systoloc bp value
           $('#diastolicbp').html("p.diastolicbp"); //switch id "diastolicbp" for diastolic bp value
 				}
 			  );		  

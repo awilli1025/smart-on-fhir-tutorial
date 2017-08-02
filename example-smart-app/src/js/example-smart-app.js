@@ -55,7 +55,6 @@
 
           var EKG = byCodes('18810-2'); //(experimenting) EKG value
 
-          var systolicbpDate = byCodes('55284-4').effectiveDateTime; // (experimenting) trying to access date of systolicbp test
 
           var p = defaultPatient(); //variable that will be used to hold all patient information extracted
 
@@ -76,13 +75,6 @@
             p.EKG = "EKG doesn't exist"; //else, save as nonexistent
 
 
-          if (typeof systolicbpDate != 'undefined'){ //if systolic date exists
-            p.systolicbpDate = 'systolicbpDate exists'; //save as "exists"
-          }
-          else
-            p.systolicbpDate = 'doesn"t exist'; //"save as DNE"
-
-
           if (typeof systolicbp != 'undefined')  { //if systolic exists, save value in p's systolicbp variable
             p.systolicbp = systolicbp;
           }
@@ -93,6 +85,8 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]); //get hdl value and unit
           p.ldl = getQuantityValueAndUnit(ldl[0]); //get ldl value and unit
+
+          p.systolicbpDate = getEffectiveDateTime(systolicbp[0]); //experiment... trying to get date of systolic
 
           ret.resolve(p);
         });
@@ -162,6 +156,16 @@
     }
   }
 
+  function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime
+    if (typeof ob != 'undefined' &&
+      typeof ob.resource != 'undefined' &&
+      typeof ob.resource.resourceType != 'undefined' &&
+      typeof ob.resource.effectiveDateTime != 'undefined'){
+        return ob.resource.effectiveDateTime + ' ';
+    }
+    else
+      return undefined;
+  }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
         typeof ob.valueQuantity != 'undefined' &&
