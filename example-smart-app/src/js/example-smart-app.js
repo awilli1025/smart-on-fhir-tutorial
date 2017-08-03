@@ -158,10 +158,10 @@
 
   function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime (built by Akeem)
     if (typeof ob != 'undefined' && ob.resourceType!= 'undefined' && ob.effectiveDateTime!='undefined'){
-        return 'yes, it exists';
+        return 1;
     }
     else
-      return 'does not exist';
+      return undefined;
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
