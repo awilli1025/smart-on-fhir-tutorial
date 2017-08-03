@@ -60,46 +60,53 @@
           <table class = "dataTable" style ="border:2px solid #9CC3E7;">
             <tr>
               <th></th>
-              <th>Document Info (temp)</th>
               <th>Date</th>
-              <th>Source</th>
+              <th>Hospital</th>
+            </tr>
+
+            <tr>
+              <td>Last EKG</td>
+              <td>Date not specified</td>
+              <td>Source not specified</td>
+            </tr>
+
+            <tr>
+              <td>Last Cath. Report</td>
+              <td>Date not specified</td>
+              <td>Source not specified</td>
+            </tr>
+
+            <tr>
+              <td>Last ECHO</td>
+              <td>Date not specified</td>
+              <td>Source not specified</td>
+            </tr>
+
+            <tr>
+              <td>Last Cardiology Note</td>
+              <td>Date not specified</td>
+              <td>Source not specified</td>
+            </tr>
+
+            <tr>
+              <td>Last D/C Summary</td>
+              <td>Date not specified</td>
+              <td>Source not specified</td>
             </tr>
 
             <tr>
               <!--I turned Systolic BP test into a hyperlink that when pressed, incites script @ bottom to re-extract data, replacing the systolicbp id with systolic bp value-->
-				      <td><a id="mylink" href="#">Systolic BP</a></td>
-              <td id='systolicbpDate'></td>
+				      <td><a id="SystolicBPLink" href="#">Systolic BP</a></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
             </tr>
 
             <tr>
-              <td>Diastolic BP</td>
-              <td id='diastolicbp'></td>
+              <td><a id="DiastolicBPLink" href="#">Diastolic BP</a></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
             </tr>
 
-            <tr>
-              <td>LDL</td>
-              <td id='ldl'></td>
-              <td>Date not specified</td>
-              <td>Source not specified</td>
-            </tr>
-
-            <tr>
-              <td>HDL</td>
-              <td id='hdl'></td>
-              <td>Date not specified</td>
-              <td>Source not specified</td>
-            </tr>
-
-            <tr>
-              <td>Hosp. D/C Summary</td>
-              <td id='D/C'></td>
-              <td>Date not specified</td>
-              <td>Source not specified</td>
-            </tr>
           </table>
         </div>
       
@@ -108,7 +115,7 @@
           I could potentially do this by giving info in scroll box an id, and replacing the contents with test results when pressed?-->
 
             <section style="height:350px;width:600px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
-              <div id="systolicbp">
+              <div id="testinformation">
               Scrollbox for data.
               </div>
             </section>
@@ -187,21 +194,35 @@
 		}
 	</script>
 	
-	<script>
+	<script>//onClick function for showing the Systolic Blood Pressure
 	  window.onload = function(){ //when the window finishes loading
-		  var a = document.getElementById("mylink");//link variable a to my hyperlink
-		  
+		  var a = document.getElementById("SystolicBPLink");//link variable a to my hyperlink
+		
 		  a.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
 
 			  extractData().then(//extract data again
 			  	function(p){
-					$('#systolicbp').html(p.systolicbp); //switch id "systolic bp" for systoloc bp value
-          $('#diastolicbp').html("p.diastolicbp"); //switch id "diastolicbp" for diastolic bp value
-				}
+					$('#testinformation').html(p.systolicbp); //switch id "systolic bp" for systoloc bp value
+				  }
 			  );		  
 		  }
-	  }
+	  }//end of script for SystolicBP onClick
 	  </script>
+
+    <script>//DiastolicBP onClick function (prints DiastolicBP when pressed)
+      window.onload = function(){ //when the window finishes loading
+        var a = document.getElementById("DiastolicBPLink");//link variable a to my hyperlink
+        
+        a.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
+
+          extractData().then(//extract data again
+            function(p){
+            $('#testinformation').html(p.diastolicbp); //switch id "diastolicbp" for diastolic bp value
+          }
+          );      
+        }
+      }//end of script for DiastolicBP onClick
+    </script>
 
 	<script src='./lib/es6-shim-0.35.1.min.js'></script>
     <script src='./src/js/example-smart-app.js'></script>
