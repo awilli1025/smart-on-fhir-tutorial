@@ -26,12 +26,15 @@
                               'http://loinc.org|18810-2']//(Akeem's experiment)last code for EKG
                       }
                     }
-                  });
+                
+                  }
+                );
 
         $.when(pt, obv).fail(onError); //for error catching
 
         $.when(pt, obv).done(function(patient, obv) { //when patient/his or her tests have been fetched
           var byCodes = smart.byCodes(obv, 'code'); 
+
           var gender = patient.gender; //patient gender
           var dob = new Date(patient.birthDate); //patient DOB
           var day = dob.getDate(); //gets date from DOB
