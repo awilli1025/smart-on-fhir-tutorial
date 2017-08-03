@@ -89,7 +89,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]); //get hdl value and unit
           p.ldl = getQuantityValueAndUnit(ldl[0]); //get ldl value and unit
 
-          var x = 0;
+          //var x = 0;
 
           /*while (systolic[x].effectiveDateTime=='undefined' && x<100){
             x++;
