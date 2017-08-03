@@ -157,11 +157,11 @@
   }
 
   function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime (built by Akeem)
-    if (typeof ob != 'undefined' && ob.resourceType!= 'undefined' && ob.effectiveDateTime!='undefined'){
+    if (typeof ob != 'undefined' && typeof ob.resourceType!= 'undefined' && typeof ob.effectiveDateTime!='undefined'){
         return 1;
     }
     else
-      return undefined;
+      return 0;
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
