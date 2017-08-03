@@ -91,13 +91,14 @@
 
           var x = 0;
 
-          while (systolic[x].effectiveDateTime=='undefined' && x<100){
+          /*while (systolic[x].effectiveDateTime=='undefined' && x<100){
             x++;
           }
           p.systolicbpDate = x;
+          */
 
 
-          //p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
+          p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
 
           ret.resolve(p);
         });
