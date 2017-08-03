@@ -164,7 +164,7 @@
         return 10+' ';
     }
     else
-      return 20+' ';
+      return 30+' ';
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
