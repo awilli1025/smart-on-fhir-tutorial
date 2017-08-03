@@ -114,7 +114,6 @@
       hdl: {value: ''},
 
       EKG: {value: ''},//EKG (test)
-      systolicbpDate: {value: ''},//systolic bp date (test)
     };
   }
 
@@ -164,7 +163,7 @@
         return ob.resource.effectiveDateTime + ' ';
     }
     else
-      return undefined;
+      return 'undefined';
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
@@ -189,13 +188,12 @@
     $('#birthdate').html(p.birthdate);
     $('#age').html(p.age);
     $('#height').html(p.height);
-    //$('#systolicbp').html(p.systolicbp);
+    $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
 
     $('#EKG').html(p.EKG);//EKG
-    $('#systolicbpDate').html(p.systolicbpDate);//systolic bp date
   };
 
 })(window);
