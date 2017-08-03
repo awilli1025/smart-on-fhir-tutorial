@@ -94,9 +94,9 @@
               <td>Source not specified</td>
             </tr>
 
+            <!--I turned Systolic BP test into a hyperlink that when pressed, incites script @ bottom to re-extract data, replacing the systolicbp id with systolic bp value-->
             <tr>
-              <!--I turned Systolic BP test into a hyperlink that when pressed, incites script @ bottom to re-extract data, replacing the systolicbp id with systolic bp value-->
-				      <td><a id="SystolicBPLink" href="#">Systolic BP</a></td>
+				      <td><a id="SysBPLink" href="#">Systolic BP</a></td>
               <td>Date not specified</td>
               <td>Source not specified</td>
             </tr>
@@ -199,7 +199,7 @@
 	
   <script>//onClick function for showing the Systolic Blood Pressure
 	  window.onload = function(){ //when the window finishes loading
-		  var b = document.getElementById("SystolicBPLink");//link variable b to my hyperlink
+		  var b = document.getElementById("SysBPLink");//link variable b to my hyperlink
 		
 		  b.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
 
