@@ -89,7 +89,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]); //get hdl value and unit
           p.ldl = getQuantityValueAndUnit(ldl[0]); //get ldl value and unit
 
-          p.systolicbpDate = getEffectiveDateTime(systolicbp[0]); //experiment... trying to get date of systolic
+          p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
 
           ret.resolve(p);
         });
@@ -164,7 +164,7 @@
         return 10+' ';
     }
     else
-      return 2+' ';
+      return 20+' ';
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
