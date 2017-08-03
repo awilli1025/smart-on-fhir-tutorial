@@ -86,7 +86,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]); //get hdl value and unit
           p.ldl = getQuantityValueAndUnit(ldl[0]); //get ldl value and unit
 
-          //p.systolicbpDate = getEffectiveDateTime(systolicbp[0]); //experiment... trying to get date of systolic
+          p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
 
           ret.resolve(p);
         });
@@ -114,6 +114,7 @@
       hdl: {value: ''},
 
       EKG: {value: ''},//EKG (test)
+      systolicbpDate: {value: ''},//systolicbP date
     };
   }
 
@@ -155,12 +156,9 @@
     }
   }
 
-  function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime
-    if (typeof ob != 'undefined' &&
-      typeof ob.resource != 'undefined' &&
-      typeof ob.resource.resourceType != 'undefined' &&
-      typeof ob.resource.effectiveDateTime != 'undefined'){
-        return ob.resource.effectiveDateTime + ' ';
+  function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime (built by Akeem)
+    if (typeof ob != 'undefined' && ob.resourceType!= 'undefined' && ob.effectiveDateTime!='undefined'){
+        return ob.effectiveDateTime + ' ';
     }
     else
       return 'undefined';
@@ -194,6 +192,7 @@
     $('#hdl').html(p.hdl);
 
     $('#EKG').html(p.EKG);//EKG
+    $('systolicbpDate').html(p.systolicbpDate);//testing pulling the systolicbpDate
   };
 
 })(window);
