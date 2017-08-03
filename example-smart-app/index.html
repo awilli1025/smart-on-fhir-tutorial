@@ -197,21 +197,6 @@
 		}
 	</script>
 	
-  <script>//onClick function for showing the Systolic Blood Pressure
-	  window.onload = function(){ //when the window finishes loading
-		  var b = document.getElementById("SysBPLink");//link variable b to my hyperlink
-		
-		  b.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
-
-			  extractData().then(//extract data again
-			  	function(p){
-					$('#sys').html(p.systolicbp); //switch id "systolic bp" for systoloc bp value
-				  }
-			  );		  
-		  }
-	  }//end of script for SystolicBP onClick
-	</script>
-
     <script>//DiastolicBP onClick function (prints DiastolicBP when pressed)
       window.onload = function(){ //when the window finishes loading
         var a = document.getElementById("DiastolicBPLink");//link variable a to my hyperlink
@@ -226,6 +211,21 @@
         }
       }//end of script for DiastolicBP onClick
     </script>
+
+  <script>//onClick function for showing the Systolic Blood Pressure
+	  window.onload = function(){ //when the window finishes loading
+		  var b = document.getElementById("SysBPLink");//link variable b to my hyperlink
+		
+		  b.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
+
+			  extractData().then(//extract data again
+			  	function(p){
+					$('#sys').html(p.systolicbp); //switch id "systolic bp" for systoloc bp value
+				  }
+			  );		  
+		  }
+	  }//end of script for SystolicBP onClick
+	</script>
 
 	  <script src='./lib/es6-shim-0.35.1.min.js'></script>
     <script src='./src/js/example-smart-app.js'></script>
