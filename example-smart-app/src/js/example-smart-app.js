@@ -9,7 +9,7 @@
 
 
     function onReady(smart)  {
-      
+
       if (smart.hasOwnProperty('patient')) {//if a patient is being handed to the program, do all of the following...
 
         var patient = smart.patient; //stores patient context
@@ -106,7 +106,7 @@
       } else {//else if no patient is being handed to the program, run onError method...
         onError(); 
       }
-    
+    }
 
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
