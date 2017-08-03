@@ -135,38 +135,38 @@
    				<div class = "modal-header">
    					<span class = "close">&times;</span>
    					<h2>Feedback</h2>
-				</div>
+				  </div>
   				
   				<div class = "modal-body">
   					<div class = "container">
-						<form action="/action_page.php">
-							<label for="firname">First Name</label>
-							<input type="text" id="firname" name="firstname" placeholder="Your name..">
+  						<form action="/action_page.php">
+  							<label for="firname">First Name</label>
+  							<input type="text" id="firname" name="firstname" placeholder="Your name..">
 
-							<label for="lasname">Last Name</label>
-							<input type="text" id="lasname" name="lastname" placeholder="Your last name..">
+  							<label for="lasname">Last Name</label>
+  							<input type="text" id="lasname" name="lastname" placeholder="Your last name..">
 
-							<label for="hospital">Hospital</label>
-							<select id="hospital" name="hospital">
-							  <option value="Methodist">Methodist</option>
-							  <option value="Riley Ray">Riley Ray</option>
-							  <option value="Eskenazi Health">Eskenazi Health</option>
-							  <option value= "IUHealth"> IU Health</option>
-							</select>
+  							<label for="hospital">Hospital</label>
+  							<select id="hospital" name="hospital">
+  							  <option value="Methodist">Methodist</option>
+  							  <option value="Riley Ray">Riley Ray</option>
+  							  <option value="Eskenazi Health">Eskenazi Health</option>
+  							  <option value= "IUHealth"> IU Health</option>
+  							</select>
 
-							<label for="subject">Subject</label>
-							<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  							<label for="subject">Subject</label>
+  							<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-							<input type="submit" value="Submit">
-							<span class = "close">&times;</span>
-						</form>
-					</div>
-				</div>
-			</div>
-   		</div>
-   	</div>
+  							<input type="submit" value="Submit">
+  							<span class = "close">&times;</span>
+  						</form>
+					 </div>
+				  </div><!--modal-body-->
+   		  </div><!--modal-content-->
+   	  </div><!--FeedBack Modal-->
+    </div>
     
-    <script>
+  <script>
 		// Get the modal
 		var modal = document.getElementById('FeedbackModal');
 
@@ -194,7 +194,7 @@
 		}
 	</script>
 	
-<!--	<script>//onClick function for showing the Systolic Blood Pressure
+  <script>//onClick function for showing the Systolic Blood Pressure
 	  window.onload = function(){ //when the window finishes loading
 		  var b = document.getElementById("SystolicBPLink");//link variable b to my hyperlink
 		
@@ -207,8 +207,8 @@
 			  );		  
 		  }
 	  }//end of script for SystolicBP onClick
-	  </script>
--->
+	</script>
+
     <script>//DiastolicBP onClick function (prints DiastolicBP when pressed)
       window.onload = function(){ //when the window finishes loading
         var a = document.getElementById("DiastolicBPLink");//link variable a to my hyperlink
@@ -224,7 +224,7 @@
       }//end of script for DiastolicBP onClick
     </script>
 
-	<script src='./lib/es6-shim-0.35.1.min.js'></script>
+	  <script src='./lib/es6-shim-0.35.1.min.js'></script>
     <script src='./src/js/example-smart-app.js'></script>
     <script src='./lib/fhir-client.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
