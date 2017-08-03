@@ -197,21 +197,6 @@
 		}
 	</script>
 	
-    <script>//DiastolicBP onClick function (prints DiastolicBP when pressed)
-      window.onload = function(){ //when the window finishes loading
-        var a = document.getElementById("DiastolicBPLink");//link variable a to my hyperlink
-        
-        a.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
-
-          extractData().then(//extract data again
-            function(p){
-            $('#testinformation').html(p.diastolicbp); //switch id "diastolicbp" for diastolic bp value
-            }
-          );      
-        }
-      }//end of script for DiastolicBP onClick
-    </script>
-
   <script>//onClick function for showing the Systolic Blood Pressure
 	  window.onload = function(){ //when the window finishes loading
 		  var b = document.getElementById("SysBPLink");//link variable b to my hyperlink
@@ -245,5 +230,21 @@
         }
       );
     </script>
+
+    <script>//DiastolicBP onClick function (prints DiastolicBP when pressed)
+      window.onload = function(){ //when the window finishes loading
+        var a = document.getElementById("DiastolicBPLink");//link variable a to my hyperlink
+        
+        a.onclick = function(p){//when the link is pressed, extractData() for patient, then print what I want
+
+          extractData().then(//extract data again
+            function(p){
+            $('#testinformation').html(p.diastolicbp); //switch id "diastolicbp" for diastolic bp value
+            }
+          );      
+        }
+      }//end of script for DiastolicBP onClick
+    </script>
+
   </body>
 </html>
