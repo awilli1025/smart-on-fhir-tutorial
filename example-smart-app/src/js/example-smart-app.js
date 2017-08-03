@@ -89,7 +89,15 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]); //get hdl value and unit
           p.ldl = getQuantityValueAndUnit(ldl[0]); //get ldl value and unit
 
-          p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
+          var x = 0;
+
+          while (systolic[x].effectiveDateTime=='undefined' && x<100){
+            x++;
+          }
+          p.systolicbpDate = x;
+
+
+          //p.systolicbpDate = getEffectiveDateTime(systolicbp); //experiment... trying to get date of systolic
 
           ret.resolve(p);
         });
