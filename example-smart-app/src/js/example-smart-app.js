@@ -157,11 +157,13 @@
   }
 
   function getEffectiveDateTime(ob){ //test method trying to get effectiveDateTime (built by Akeem)
-    if (typeof ob != 'undefined' && typeof ob.resourceType!= 'undefined' && typeof ob.effectiveDateTime!='undefined'){
-        return 1;
+    if (typeof ob != 'undefined' && 
+        typeof ob.resourceType!= 'undefined' && 
+        typeof ob.effectiveDateTime!='undefined'){
+        return 1+' ';
     }
     else
-      return 0;
+      return 0+' ';
   }
   function getQuantityValueAndUnit(ob) { //gives valueQuantity of a test
     if (typeof ob != 'undefined' &&
@@ -192,7 +194,7 @@
     $('#hdl').html(p.hdl);
 
     $('#EKG').html(p.EKG);//EKG
-    $('systolicbpDate').html(p.systolicbpDate);//testing pulling the systolicbpDate
+    $('#systolicbpDate').html(p.systolicbpDate);//testing pulling the systolicbpDate
   };
 
 })(window);
